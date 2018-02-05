@@ -1,0 +1,17 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: tonywaithaka/cptestenv_api
+    tag: 'latest'
+
+inputs:
+- name: cp_github_repo
+
+outputs:
+- name: backend_build
+
+run:
+  path: cp_github_repo/src_backend/ci/Scripts/test_script.sh
